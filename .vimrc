@@ -43,3 +43,6 @@ set ignorecase
 "It really helps when it comes to indenting large blocks and confused =)
 vnoremap < <gv
 vnoremap > >gv
+
+"Setting PHP syntax for files with the extension 'ctp'.
+au BufNewFile,BufRead *.ctp setfiletype php
