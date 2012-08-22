@@ -13,7 +13,9 @@ PS1="\[\e[0;1m\][\[\e[33;1m\]\u\[\e[0;1m\]@\h:\[\e[32;1m\]\w\[\e[0;1m\]]$\[\e[0m
 TMOUT=0
 EDITOR=vim
 
+# Exports
 export LANG LC_ALL TERM PS1 LS_COLORS TMOUT EDITOR
+export PATH=~/.usr/scripts/:$PATH
 
 # Alias
 alias grep='grep --color=auto'
@@ -23,4 +25,3 @@ alias l='ls -CF'
 
 # User specific aliases and functions
 alias cvs_check="cvs -q diff|grep ^Index:|sed s/^Index:/M/"
-alias suat_dir='cd /home/andrecosta/Documents/SUAT/'
