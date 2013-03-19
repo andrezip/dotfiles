@@ -2,7 +2,7 @@
 "
 " vimrc of andrezip (Andre Costa)
 "
-" http://www.hardcode.com.br
+" http://www.andrec.org
 "
 " Foloww the GitHub:
 " https://github.com/andrezip/dotfiles
