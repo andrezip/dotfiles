@@ -13,4 +13,4 @@ You would like to use in your setting?
 * Use new editor vim =)
 
 ## Article
-http://andrec.org/blog/dotfiles-facilitating-lives/
+http://andreczip.github.com/blog/dotfiles-facilitating-lives/
