@@ -8,7 +8,7 @@ Replace all editors in the world! uahuahauuhauha
 ##Using
 You would like to use in your setting?
 
-* Clone https://github.com/andrezip/dotfiles.git
+* Clone https://github.com/andreczip/dotfiles.git
 * Copy it to your home ($ ~/)
 * Use new editor vim =)
 
