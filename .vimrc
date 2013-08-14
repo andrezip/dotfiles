@@ -55,10 +55,22 @@ set nowrap
 " pesquisa
 set incsearch
 set hlsearch
-set ignorecase
+set ignorecase  
+
+" Highlight trailing whitespace in vim on non empty lines, but not while
+" typing in insert mode!
+highlight ExtraWhitespace ctermbg=red guibg=Brown
+au ColorScheme * highlight ExtraWhitespace guibg=red
+au BufEnter * match ExtraWhitespace /\S\zs\s\+$/
+au InsertEnter * match ExtraWhitespace /\S\zs\s\+\%#\@<!$/
+au InsertLeave * match ExtraWhiteSpace /\S\zs\s\+$/
 
 " seta uma fonte maior no gvim
 set gfn=Monospace\ 14
 
 " seta sintase PHP syntax para extencoes 'ctp'.
 au BufNewFile,BufRead *.ctp setfiletype php
+
+" seta autocomplete no PHP
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+:imap <s-tab> <c-x><c-o>
