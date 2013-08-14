@@ -1,48 +1,64 @@
 " vimrc
+" vimrc of @andreczip
 "
-" vimrc of andrezip (Andre Costa)
-"
-" http://www.andrec.org
-"
-" Foloww the GitHub:
-" https://github.com/andrezip/dotfiles
-"
-" Copy, edit and use.
-"
+" seta o encoding pra utf8
+set encoding=utf8
 
+" liga a coloracao de sintaxe
 syntax on
 
-" turn off compatility with vi and modelines 
-set nocompatible
-set modelines=0
+" seta o tema
+colorscheme desert
 
-" no backups files
-set nobackup       "no backup files
-set nowritebackup  "only in case you don't want a backup file while editing
-set noswapfile     "no swap files
-set ruler	       "show the cursor position all the time
-
-" tab settings
+" seta o tab para aparecer como 4 espaços quando digitado
 set tabstop=4
+
+" seta o tab para aparecer como 4 espaços em identacao
 set shiftwidth=4
-set softtabstop=4
-set expandtab
 
-" Switch wrap off for everything
-set nowrap
+" nao expande tabs para espacos
+set noexpandtab
 
-" Always display the status line
+" exibe numero das linhas
+" set number
+
+" destaca linha atual
+set cursorline
+highlight CursorLine guibg=#404040
+
+" destaca coluna atual
+set cursorcolumn
+highlight CursorColumn guibg=#404040
+
+" habilita backspace pra qualquer porcaria
+set backspace=indent,eol,start
+
+" cor das palavras buscadas
+highlight Search guibg=#FF0000 guifg='NONE'
+
+" mostra sempre a barra de status
 set laststatus=2
 
-" Search
-set incsearch       " Increment search
-set hlsearch        " Highligth search :)
+" ignora cases na busca
 set ignorecase
 
-"Options for selected blocks are reselecionados after indentations.
-"It really helps when it comes to indenting large blocks and confused =)
-vnoremap < <gv
-vnoremap > >gv
+" liga a auto identacao
+set autoindent
+set smartindent
 
-"Setting PHP syntax for files with the extension 'ctp'.
+" exibe o modo sempre
+set showmode
+
+" nao quebra as linhas
+set nowrap 
+
+" pesquisa
+set incsearch
+set hlsearch
+set ignorecase
+
+" seta uma fonte maior no gvim
+set gfn=Monospace\ 14
+
+" seta sintase PHP syntax para extencoes 'ctp'.
 au BufNewFile,BufRead *.ctp setfiletype php
