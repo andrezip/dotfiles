@@ -1,61 +1,61 @@
 " vimrc
 " vimrc of @andreczip
 "
-" seta o encoding pra utf8
+set nocompatible
+filetype off
+
+" Vundle
+" git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+ " required!
+Bundle 'gmarik/vundle'
+Bundle 'scrooloose/nerdtree'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle "https://github.com/scrooloose/nerdtree"
+
+filetype plugin indent on     " required!
+
 set encoding=utf8
-
-" liga a coloracao de sintaxe
 syntax on
+set nowrap
 
-" seta o tema
+" set theme
 colorscheme desert
 
-" seta o tab para aparecer como 4 espaços quando digitado
+" set tabs
 set tabstop=4
-
-" seta o tab para aparecer como 4 espaços em identacao
 set shiftwidth=4
-
-" nao expande tabs para espacos
 set noexpandtab
 
-" exibe numero das linhas
+" show lines
 " set number
 
-" destaca linha atual
-set cursorline
-highlight CursorLine guibg=#404040
-
-" destaca coluna atual
-set cursorcolumn
-highlight CursorColumn guibg=#404040
-
-" habilita backspace pra qualquer porcaria
+" enabled backspace
 set backspace=indent,eol,start
 
-" cor das palavras buscadas
+" color of row fetched
 highlight Search guibg=#FF0000 guifg='NONE'
 
-" mostra sempre a barra de status
+" always shows the status bar
 set laststatus=2
 
-" ignora cases na busca
+" ignores cases in search
 set ignorecase
 
-" liga a auto identacao
+" alloy auto indentation
 set autoindent
 set smartindent
 
-" exibe o modo sempre
-set showmode
-
-" nao quebra as linhas
-set nowrap 
-
-" pesquisa
+" search
 set incsearch
 set hlsearch
-set ignorecase  
+set ignorecase
 
 " Highlight trailing whitespace in vim on non empty lines, but not while
 " typing in insert mode!
@@ -65,12 +65,9 @@ au BufEnter * match ExtraWhitespace /\S\zs\s\+$/
 au InsertEnter * match ExtraWhitespace /\S\zs\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhiteSpace /\S\zs\s\+$/
 
-" seta uma fonte maior no gvim
-set gfn=Monospace\ 14
-
-" seta sintase PHP syntax para extencoes 'ctp'.
+" Arrow syntax PHP syntax for extensions 'ctp'.
 au BufNewFile,BufRead *.ctp setfiletype php
 
-" seta autocomplete no PHP
+" set autocomplete for PHP
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 :imap <s-tab> <c-x><c-o>
