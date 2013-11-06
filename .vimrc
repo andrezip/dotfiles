@@ -12,12 +12,11 @@ call vundle#rc()
 " let Vundle manage Vundle
  " required!
 Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
 
 " My Bundles here:
 "
 " original repos on github
-Bundle "https://github.com/scrooloose/nerdtree"
+Bundle 'scrooloose/nerdtree'
 
 filetype plugin indent on     " required!
 
