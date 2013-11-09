@@ -22,3 +22,5 @@ alias grep='grep --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+alias mydumpmysql='mysqldump -u root -proot mydb > mysql.sql'
