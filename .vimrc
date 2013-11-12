@@ -5,24 +5,22 @@ set nocompatible
 filetype off
 
 " Vundle
-" git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" let Vundle manage Vundle
- " required!
 Bundle 'gmarik/vundle'
-
-" My Bundles here:
-"
-" original repos on github
 Bundle 'scrooloose/nerdtree'
+Bundle 'mattn/emmet-vim'
 
 filetype plugin indent on     " required!
+" End Vundle
 
 set encoding=utf8
 syntax on
 set nowrap
+
+" set color
+set background=dark
 
 " set theme
 colorscheme desert
