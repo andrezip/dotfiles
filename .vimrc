@@ -11,6 +11,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'mattn/emmet-vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'vim-scripts/phpfolding.vim'
 
 filetype plugin indent on     " required!
 " End Vundle
@@ -18,6 +20,7 @@ filetype plugin indent on     " required!
 set encoding=utf8
 syntax on
 set nowrap
+set paste
 
 " set color
 set background=dark
@@ -53,6 +56,11 @@ set smartindent
 set incsearch
 set hlsearch
 set ignorecase
+
+" swap files
+set backup
+set backupdir=/tmp
+set dir=/tmp
 
 " Highlight trailing whitespace in vim on non empty lines, but not while
 " typing in insert mode!
