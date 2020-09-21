@@ -1,5 +1,5 @@
 " vimrc
-" vimrc of @andreczip
+" vimrc of @f0rmig4
 "
 set nocompatible
 filetype off
